@@ -1,4 +1,4 @@
-Official Travis-CI worker image on Online Labs [![Build Status](https://travis-ci.org/online-labs/image-app-nodejs.svg?branch=master)](https://travis-ci.org/online-labs/image-app-nodejs)
+Official Travis-CI worker image on Online Labs [![Build Status](https://travis-ci.org/online-labs/image-service-travis.svg?branch=master)](https://travis-ci.org/online-labs/image-service-travis)
 ==============================================
 
 Scripts to build the official Travis-CI worker image on Online Labs
