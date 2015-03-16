@@ -8,16 +8,21 @@ RUN /usr/local/sbin/builder-enter
 
 
 # Install packages
-RUN apt-get -q update                                       \
- && apt-get -y -qq upgrade                                  \
- && apt-get -y -qq install                                  \
-        git                                                 \
-        golang                                              \
+RUN apt-get -q update      \
+ && apt-get -y -qq upgrade \
+ && apt-get -y -qq install \
+        git                \
+        golang             \
  && apt-get clean
 
 
 # Clone the travis-ci/worker repository
-RUN git clone https://github.com/travis-ci/worker.git
+ENV GOPATH /
+ENV GOROOT /go
+ENV PATH $PATH:$GOROOT/bin
+RUN mkdir -p $GOROOT \
+ && git clone https://github.com/travis-ci/worker.git /worker
+# RUN go get github.com/hamfist/deppy
 # FIXME: build the project
 
 
