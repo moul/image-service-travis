@@ -1,6 +1,8 @@
 Official Travis-CI worker image on Online Labs [![Build Status](https://travis-ci.org/online-labs/image-service-travis.svg?branch=master)](https://travis-ci.org/online-labs/image-service-travis)
 ==============================================
 
+:warning:**WORK IN PROGRESS**:warning:
+
 Scripts to build the official Travis-CI worker image on Online Labs
 
 This image is built using [Image Tools](https://github.com/online-labs/image-tools) and depends on the official [Ubuntu](https://github.com/online-labs/image-ubuntu) image.
