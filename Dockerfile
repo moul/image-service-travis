@@ -25,11 +25,14 @@ RUN apt-get -q update      \
 
 # Clone the travis-ci/worker repository and install deppy
 RUN mkdir -p $GOROOT $GOPATH/src/github.com/travis-ci \
- && git clone https://github.com/travis-ci/worker.git $GOPATH/src/github.com/travice-ci/worker \
+ && git clone https://github.com/travis-ci/worker.git $GOPATH/src/github.com/travis-ci/worker \
  && go get github.com/hamfist/deppy
+WORKDIR $GOPATH/src/github.com/travis-ci/worker
 
 
-# FIXME: build the project
+# Build the project
+RUN deppy restore && go get -u github.com/golang/lint/golint
+RUN make
 
 
 # Clean rootfs from image-builder
