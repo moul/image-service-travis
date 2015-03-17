@@ -6,6 +6,11 @@ MAINTAINER Online Labs <opensource@ocs.online.net> (@online_en)
 # Prepare rootfs for image-builder
 RUN /usr/local/sbin/builder-enter
 
+# Environment vars
+ENV GOPATH /go
+ENV GOROOT /usr/lib/go
+ENV PATH $PATH:$GOPATH/bin
+
 
 # Install packages
 RUN apt-get -q update      \
@@ -13,16 +18,17 @@ RUN apt-get -q update      \
  && apt-get -y -qq install \
         git                \
         golang             \
+        mercurial          \
+        subversion         \
  && apt-get clean
 
 
-# Clone the travis-ci/worker repository
-ENV GOPATH /
-ENV GOROOT /go
-ENV PATH $PATH:$GOROOT/bin
-RUN mkdir -p $GOROOT \
- && git clone https://github.com/travis-ci/worker.git /worker
-# RUN go get github.com/hamfist/deppy
+# Clone the travis-ci/worker repository and install deppy
+RUN mkdir -p $GOROOT $GOPATH/src/github.com/travis-ci \
+ && git clone https://github.com/travis-ci/worker.git $GOPATH/src/github.com/travice-ci/worker \
+ && go get github.com/hamfist/deppy
+
+
 # FIXME: build the project
 
 
