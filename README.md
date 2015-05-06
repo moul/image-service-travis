@@ -1,13 +1,19 @@
-Official Travis-CI worker image on Online Labs [![Build Status](https://travis-ci.org/online-labs/image-service-travis.svg?branch=master)](https://travis-ci.org/online-labs/image-service-travis)
-==============================================
+# Official Travis-Ci Worker image on Scaleway
 
-:warning:**WORK IN PROGRESS**:warning:
+[![Travis](https://img.shields.io/travis/scaleway/image-service-travis.svg)](https://travis-ci.org/scaleway/image-service-travis)
+[![Scaleway ImageHub](https://img.shields.io/badge/ImageHub-view-ff69b4.svg)](https://hub.scaleway.com/travis-ci-worker.html)
+[![Run on Scaleway](https://img.shields.io/badge/Scaleway-run-69b4ff.svg)](https://cloud.scaleway.com/#/servers/new?image=coming-soon)
 
-Scripts to build the official Travis-CI worker image on Online Labs
+:warning: *WORK IN PROGRESS* :warning:
 
-This image is built using [Image Tools](https://github.com/online-labs/image-tools) and depends on the official [Ubuntu](https://github.com/online-labs/image-ubuntu) image.
+Scripts to build the official Travis-Ci Worker image on Scaleway
+
+This image is built using [Image Tools](https://github.com/scaleway/image-tools) and depends on the official [Ubuntu](https://github.com/scaleway/image-ubuntu) image.
 
 <img src="https://travis-ci.com/img/travis-mascot-200px.png" width="201px" />
+
+NOTE: The Travis-CI worker image is not a typical image and is only available for Travis-CI organization.
+
 
 ---
 
@@ -15,19 +21,20 @@ This image is built using [Image Tools](https://github.com/online-labs/image-too
 
 We use the Docker's building system and convert it at the end to a disk image that will boot on real servers without Docker. Note that the image is still runnable as a Docker container for debug or for inheritance.
 
-[More info](https://github.com/online-labs/image-tools#docker-based-builder)
+[More info](https://github.com/scaleway/image-tools)
+
 
 ---
 
-Install
--------
+## Install
 
-Build and write the image to /dev/nbd1 (see [documentation](https://doc.cloud.online.net/howto/create_image.html))
+Build and write the image to /dev/nbd1 (see [documentation](https://www.scaleway.com/docs/create_an_image_with_docker))
 
     $ make install
 
-Full list of commands available at: [online-labs/image-tools](https://github.com/online-labs/image-tools/tree/master#commands)
+Full list of commands available at: [scaleway/image-tools](https://github.com/scaleway/image-tools/#commands)
+
 
 ---
 
-A project by [![Online Labs](https://raw.githubusercontent.com/online-labs/doc.cloud.online.net/master/www/documentation/docs_public/contents/images/logo_footer.png)](http://labs.online.net/)
+A project by [![Scaleway](https://avatars1.githubusercontent.com/u/5185491?v=3&s=42)](https://www.scaleway.com/)

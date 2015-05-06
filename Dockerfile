@@ -1,10 +1,11 @@
-## -*- docker-image-name: "armbuild/ocs-app-nodejs:trusty" -*-
-FROM armbuild/ocs-app-docker:latest
-MAINTAINER Online Labs <opensource@ocs.online.net> (@online_en)
+## -*- docker-image-name: "armbuild/scw-app-nodejs:latest" -*-
+FROM armbuild/scw-app-docker:latest
+MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
 
 # Prepare rootfs for image-builder
 RUN /usr/local/sbin/builder-enter
+
 
 # Environment vars
 ENV GOPATH /go
