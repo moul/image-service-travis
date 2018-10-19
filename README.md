@@ -37,4 +37,4 @@ Full list of commands available at: [scaleway/image-tools](https://github.com/sc
 
 ---
 
-A project by [![Scaleway](https://avatars1.githubusercontent.com/u/5185491?v=3&s=42)](https://www.scaleway.com/)
+A project by [![Scaleway](https://avatars1.githubusercontent.com/u/5185491?v=3&s=42)](https://www.scaleway.com/) [![GuardRails badge](https://badges.production.guardrails.io/moul/image-service-travis.svg)](https://www.guardrails.io)
